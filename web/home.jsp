@@ -13,8 +13,18 @@
         <%@include file="WEB-INF/jspf/header.jspf" %>
     </head>
     
+    <style>
+        footer {
+        position: absolute; 
+        bottom: 0px; 
+        width: 100%; 
+        height: 60px; 
+        
+    }
+    </style>
+    
     <body>
-        <h1><center>Cálculo de Amortização</center></h1><br/>
+        
          <%@include file="WEB-INF/jspf/menu.jspf" %>
         <hr/>
        
@@ -25,6 +35,7 @@
     </body>
     
     <footer>
-        <%@include file="WEB-INF/jspf/footer.jspf" %>
+        <div><%@include file="WEB-INF/jspf/footer.jspf" %></div>
+        
     </footer>
 </html>
