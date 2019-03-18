@@ -29,9 +29,13 @@
         <h3>Integrantes:</h3>
         <dl>
             <dt>Marcelo K. Sakaguchi</dt>
-            <dd>DESCRIÇÃO</dd><br>
+            <dd>Atualmente cursando Análise e Desenvolvimento de Sistemas pela Fatec Praia Grande. <br/>
+                Já atuando na área de TI, como desenvolvedor de softwares na área financeira.</dd><br>
+           
+           
             <dt>Davi Lima Pereira</dt>
             <dd>Formado Técnico em Informatica pela ETEC Praia Grande em 2011.<br/>Atualmente cursando Analíse e Desenvolvimento de Sistemas pela Fatec Praia Grande.</dd><br>
+            
             <dt>Alex Sandro Rodrigues</dt>
             <dd>DESCRIÇÃO</dd>
         </dl>
