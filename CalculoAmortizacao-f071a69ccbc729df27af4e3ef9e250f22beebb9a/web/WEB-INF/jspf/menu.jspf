@@ -1,0 +1,13 @@
+
+<%@ page pageEncoding="UTF-8" %>
+<h2 align="center">MENU</h2>
+<table align="center">   
+    <tr>
+        <td><a href="home.jsp">HOME</a></td> <td>||</td>
+        <td><a href="amortizacao-constante.jsp">AMORTIZAÇÃO CONSTANTE</a></td> <td>||</td> 
+        <td><a href="amortizacao-americana.jsp">AMORTIZAÇÃO AMERICANA</a></td> <td>||</td> 
+        <td><a href="tabela-price.jsp">TABELA PRICE</a></td>
+    </tr>
+</table>
+<hr/>
+
