@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Calculo Amortizacao</title>
         <%@include file="WEB-INF/jspf/header.jspf" %>
+        <h1><center>Cálculo de Amortização</center></h1><br/><hr/>
     </head>
     
     <style>
@@ -26,12 +27,15 @@
     <body>
         
          <%@include file="WEB-INF/jspf/menu.jspf" %>
-        <hr/>
-       
         
-        <br/>Nomes: Marcelo K. Sakaguchi
+       
+         <div id="nomes"> 
+            
+        <br/> Marcelo K. Sakaguchi
         <br/>  Davi Lima
         <br/>  Alex Sandro Rodrigues
+        
+        </div>
     </body>
     
     <footer>
