@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Calculo Amortizacao</title>
         <%@include file="WEB-INF/jspf/header.jspf" %>
+        <h1><center>Cálculo de Amortização</center></h1><br/><hr/>
     </head>
     
     <style>
@@ -24,22 +25,17 @@
     </style>
     
     <body>
-        <%@include file="WEB-INF/jspf/menu.jspf" %>       
-    
-        <h3>Integrantes:</h3>
-        <dl>
-            <dt>Marcelo K. Sakaguchi</dt>
-            <dd>Atualmente cursando Análise e Desenvolvimento de Sistemas pela Fatec Praia Grande. <br/>
-                Já atuando na área de TI, como desenvolvedor de softwares na área financeira.</dd><br>
-           
-           
-            <dt>Davi Lima Pereira</dt>
-            <dd>Formado Técnico em Informatica pela ETEC Praia Grande em 2011.<br/>Atualmente cursando Analíse e Desenvolvimento de Sistemas pela Fatec Praia Grande.</dd><br>
+        
+         <%@include file="WEB-INF/jspf/menu.jspf" %>
+        
+       
+         <div id="nomes"> 
             
-            <dt>Alex Sandro Rodrigues</dt>
-            <dd>DESCRIÇÃO</dd>
-        </dl>
-   
+        <br/> Marcelo K. Sakaguchi
+        <br/>  Davi Lima
+        <br/>  Alex Sandro Rodrigues
+        
+        </div>
     </body>
     
     <footer>

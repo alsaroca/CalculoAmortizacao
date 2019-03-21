@@ -1,5 +1,4 @@
-<%@page import="java.text.NumberFormat"%>
-<%@page import="java.util.Locale"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -11,24 +10,17 @@
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf" %> 
         <h1><center>Amortização Constante</center></h1><br/>
-        <p align="center">Também conhecido como Sistema de Amortização Constante (SAC), ou Método Hamburguês, é caracterizado por pagamentos mensais decrescentes, que embutem uma amortização constante.</p>
         <hr/>
         
         <form>
-            <table align="center">
-                <tr>
-                    <td>Valor Financiado:</td><td> <input type="number" name="valorFinanciado"></td>
-                    <td>Número de meses: </td><td><input type="number" name="mes"></td>
-                    <td>Taxa de Juros(em(%)) por mês: </td><td><input type="number" name="juros" min="0" step="0.01" required></td>
-                    <td><input type="submit" name="calcular" value="CALCULAR"></td>
-                </tr>
-            </table>
-            <br/><br/><br/>
-            <% Locale localeBR = new Locale("pt","BR"); %>
-            <% NumberFormat dinheiro = NumberFormat.getCurrencyInstance(localeBR); %>
+            Valor Financiado: <input type="number" name="valorFinanciado"><br/>
+            Número de meses: <input type="number" name="mes"><br/>
+            Taxa de Juros(em(%)): <input type="number" name="juros"><br/>
+            <br/><input type="submit" name="calcular" value="CALCULAR"><br/><br/>
+            
             <% if(request.getParameter("calcular")!=null){ %>
                 
-            <% try{ %>
+                <% try{ %>
                 <% int i=1; %>
                 <% double vf = Double.valueOf(request.getParameter("valorFinanciado")); %>
                 <% double meses = Double.valueOf(request.getParameter("mes")); %>
@@ -51,7 +43,7 @@
                 <% totalJurosOutput += jurosOutput; %>
                 <% totalParc += parc; %>
                 
-                <table border="1" align="center">
+                <table border="1">
                     <tr>
                         <th>#</th>
                         <th>Parcelas</th>
@@ -60,11 +52,11 @@
                     </tr>
                     
                     <tr>
-                       <td align="center"><%= i %></td>
-                       <td align="right"><%= dinheiro.format(parc) %></td>
-                       <td align="right"><%= dinheiro.format(amort) %></td>
-                       <td align="right"><%= dinheiro.format(jurosOutput) %></td>
-                       <td align="right"><%= dinheiro.format(saldoDevedor)%></td>
+                       <td><%= i %></td>
+                       <td><%= parc %></td>
+                       <td><%= amort %></td>
+                       <td><%= jurosOutput %></td>
+                       <td><%= saldoDevedor %></td>
                        
                     </tr>
                     
@@ -74,11 +66,11 @@
                         <% parc = jurosOutput + amort; %>
                        
                         <tr>
-                            <td align="center"><%= i %></td>
-                            <td align="right"><%= dinheiro.format(parc) %></td>
-                            <td align="right"><%= dinheiro.format(amort) %></td>
-                            <td align="right"><%= dinheiro.format(jurosOutput) %></td>
-                            <td align="right"><%= dinheiro.format(saldoDevedor)%></td> 
+                            <td><%= i %></td>
+                            <td><%= parc %></td>
+                            <td><%= amort %></td>
+                            <td><%= jurosOutput %></td>
+                            <td><%= saldoDevedor %></td>  
                         </tr>
                         <% totalAmort = totalAmort + amort; %>
                         <% totalJurosOutput += jurosOutput; %>
@@ -89,13 +81,13 @@
                 
                     <tr>
                         <td> >> </td>
-                        <td align="right"><%= dinheiro.format(totalParc) %></td>
-                        <td align="right"><%= dinheiro.format(totalAmort) %></td>
-                        <td align="right"><%= dinheiro.format(totalJurosOutput) %></td>
+                        <td><%= totalParc %></td>
+                        <td><%= totalAmort %></td>
+                        <td><%= totalJurosOutput %></td>
                         <td><center><b> <<-TOTAIS </b></center></td> 
                     </tr>
                 </table>
-                <br/>    
+                    
                 
                 <% }catch(Exception e){%>
                     <h2 style="color:red">Número Inválido</h2>
@@ -103,7 +95,4 @@
             <% } %>
         </form>
     </body>
-    <footer>
-        <%@include file="WEB-INF/jspf/footer.jspf" %>
-    </footer>
 </html>
